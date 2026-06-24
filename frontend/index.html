@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedLeak AI | Enterprise Insider Threat SOC</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="app-shell">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <div class="logo-container">
+          <div class="logo-icon">M</div>
+          <span class="logo-text">MedLeak AI</span>
+        </div>
+        
+        <nav class="sidebar-nav">
+          <ul class="nav-links">
+            <li class="nav-item active" data-page="dashboard">
+              <a href="#dashboard">
+                <i class="nav-icon" data-lucide="layout-dashboard"></i>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item" data-page="risk-analysis">
+              <a href="#risk-analysis">
+                <i class="nav-icon" data-lucide="shield-alert"></i>
+                <span>Risk Analysis</span>
+              </a>
+            </li>
+            <li class="nav-item" data-page="threat-intel">
+              <a href="#threat-intel">
+                <i class="nav-icon" data-lucide="brain-circuit"></i>
+                <span>Threat Intel</span>
+              </a>
+            </li>
+            <li class="nav-item" data-page="alerts">
+              <a href="#alerts">
+                <i class="nav-icon" data-lucide="bell-ring"></i>
+                <span>Alerts Center</span>
+              </a>
+            </li>
+            <li class="nav-item" data-page="analytics">
+              <a href="#analytics">
+                <i class="nav-icon" data-lucide="bar-chart-3"></i>
+                <span>Analytics</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="system-status">
+          <div class="status-dot"></div>
+          <span class="status-text">SYSTEM SECURE</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="workspace">
+      
+      <!-- Header bar -->
+      <header class="top-header">
+        
+        <!-- Search bar -->
+        <div class="header-left">
+          <div class="search-bar-container">
+            <i data-lucide="search"></i>
+            <input type="text" id="global-search" class="search-input" placeholder="Search employee ID, name, or alert code...">
+          </div>
+        </div>
+
+        <!-- System Score, Notification center, Profile -->
+        <div class="header-right">
+          
+          <div class="sys-threat-score">
+            <span class="sys-threat-label">CORE THREAT LEVEL:</span>
+            <span class="sys-threat-val text-glow-red" id="sys-threat-level-badge">ELEVATED (84)</span>
+          </div>
+
+          <!-- Notification Bell -->
+          <div class="notif-bell-container" id="notif-bell-trigger">
+            <button class="notif-btn">
+              <i data-lucide="bell"></i>
+            </button>
+            <div class="notif-badge" id="notif-count-badge">4</div>
+            
+            <!-- Notification Panel Dropdown -->
+            <div class="notif-dropdown" id="notif-dropdown-panel">
+              <div class="notif-header">
+                <h4>System Logs & Alerts</h4>
+                <button class="notif-clear-btn" id="notif-dismiss-all">Dismiss All</button>
+              </div>
+              <ul class="notif-list" id="notif-items-list">
+                <!-- Injected dynamically -->
+              </ul>
+            </div>
+          </div>
+
+          <!-- User Card -->
+          <div class="user-profile-header">
+            <div class="user-avatar">SR</div>
+            <div class="user-info">
+              <span class="user-name">S. Rodriguez</span>
+              <span class="user-role">SOC Lead Officer</span>
+            </div>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Dynamic Page Container -->
+      <div class="content-body" id="main-content">
+        <!-- Rendered by app.js router -->
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Main Application Script -->
+  <script type="module" src="js/app.js?v=5"></script>
+</body>
+</html>
